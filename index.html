@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Doc Kali Linux</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>SUPER</header>
+        <ul>
+          <li><a class="nav-link" href="#What_is_Kali_Linux?">What is Kali Linux?</a></li>
+          <li><a class="nav-link" href="#Should_I_Use_Kali_Linux?">Should I Use Kali Linux?</a></li>
+          <li><a class="nav-link" href="#Which_Image_Should_I_Download?">Which Image Should I Download?</a></li>
+          <li><a class="nav-link" href="#Downloading_Kali_Linux">Downloading Kali Linux</a></li>
+          <li><a class="nav-link" href="#More">More</a></li>
+        </ul>
+      </nav>
+      
+      <main id="main-doc">
+        <section class="main-section" id="What_is_Kali_Linux?">
+          <header>What is Kali Linux?</header>
+          <article>
+            <p>Kali Linux is a Debian-based Linux distribution aimed at advanced Penetration Testing and Security Auditing. Kali Linux contains several hundred tools which are geared towards various information security tasks, such as Penetration Testing, Security research, Computer Forensics and Reverse Engineering. Kali Linux is developed, funded and maintained by Offensive Security, a leading information security training company.</P>
+            <p>Kali Linux was released on the 13th March 2013 as a complete, top-to-bottom rebuild of BackTrack Linux, adhering completely to Debian development standards.</P>
+            <li>More than 600 penetration testing tools included: After reviewing every tool that was included in BackTrack, we eliminated a great number of tools that either simply did not work or which duplicated other tools that provided the same or similar functionality. Details on what's included are on the Kali Tools site.</li>
+            <li>Free (as in beer) and always will be: Kali Linux, like BackTrack, is completely free of charge and always will be. You will never, ever have to pay for Kali Linux.</li>
+            <li>Open source Git tree: We are committed to the open source development model and our development tree is available for all to see. All of the source code which goes into Kali Linux is available for anyone who wants to tweak or rebuild packages to suit their specific needs.</li>
+            <li>FHS compliant: Kali adheres to the Filesystem Hierarchy Standard, allowing Linux users to easily locate binaries, support files, libraries, etc.</li>
+            <li>Wide-ranging wireless device support: A regular sticking point with Linux distributions has been supported for wireless interfaces. We have built Kali Linux to support as many wireless devices as we possibly can, allowing it to run properly on a wide variety of hardware and making it compatible with numerous USB and other wireless devices.</li>
+            <li>Custom kernel, patched for injection: As penetration testers, the development team often needs to do wireless assessments, so our kernel has the latest injection patches included.</li>
+          </article>
+        </section>
+        <section class="main-section" id="Should_I_Use_Kali_Linux?">
+          <header>Should I Use Kali Linux?</header>
+          <article>
+            <p>Kali Linux is specifically geared to meet the requirements of professional penetration testing and security auditing. To achieve this, several core changes have been implemented in Kali Linux which reflect these needs:</P>
+            <li>Network services disabled by default: Kali Linux contains systemd hooks that disable network services by default. These hooks allow us to install various services on Kali Linux, while ensuring that our distribution remains secure by default, no matter what packages are installed. Additional services such as Bluetooth are also blacklisted by default.</li>
+            <li>Custom Linux kernel: Kali Linux uses an upstream kernel, patched for wireless injection.</li>
+            <li>A minimal and trusted set of repositories: given the aims and goals of Kali Linux, maintaining the integrity of the system as a whole is absolutely key. With that goal in mind, the set of upstream software sources which Kali uses is kept to an absolute minimum. Many new Kali users are tempted to add additional repositories to their sources.list, but doing so runs a very serious risk of breaking your Kali Linux installation.</li>
+            <p>As the distribution's developers, you might expect us to recommend that everyone should be using Kali Linux. The fact of the matter is, however, that Kali is a Linux distribution specifically geared towards professional penetration testers and security specialists, and given its unique nature, it is NOT a recommended distribution if you're unfamiliar with Linux or are looking for a general-purpose Linux desktop distribution for development, web design, gaming, etc.</P>
+          </article>
+        </section>
+        <section class="main-section" id="Which_Image_Should_I_Download?">
+          <header>Which Image Should I Download?</header>
+          <article>
+            <p>The Kali Linux download page offers three different image types (Installer, NetInstaller and Live) for download, each available for both 32-bit and 64-bit architectures.
+      
+      If in doubt, use the "Installer" image. You will need to check your system architecture to know whether to get 32-bit or 64-bit. If you don't know it, you're best to research how to find out (As a rule of thumb, if its older than 2005 you should be okay with amd64/x64/64-bit)</P>
+            <p>Each Kali Linux installer image (not live) allows the user to select the preferred "Desktop Environment (DE)" and software collection (metapackages) to be installed with operating system (Kali Linux).
+      
+      We recommend sticking with the default selections and add further packages after the installation as required. <code>Xfce</code> is the default desktop environment, and <code>kali-linux-top10</code> and <code>kali-linux-default</code> are the tools which get installed at the same time.</P>
+          </article>
+        </section>
+        <section class="main-section" id="Downloading_Kali_Linux">
+          <header>Downloading Kali Linux</header>
+          <article>
+            <p>In order to run Kali "Live" from a USB drive on standard Windows and Apple PCs, you'll need a Kali Linux bootable ISO image, in either 32-bit or 64-bit format.
+      
+      If you're not sure of the architecture of the system you want to run Kali on, on Linux or macOS, you can run the command <code>uname -m</code> at the command line. If you get the response, "x86_64", use the 64-bit ISO image (the one containing "amd64" in the file name); if you get "i386", use the 32-bit image (the one containing "i386" in the file name). If you're on a Windows system, the procedure for determining whether your architecture is detailed on Microsoft's website.</P>
+            <p>Before you run Kali Linux Live, or install it to your hard disk, you want to be very sure that what you've got actually is Kali Linux, and not an imposter. Kali Linux is a professional penetration testing and forensics toolkit. As a professional penetration tester, having absolute confidence in the integrity of your tools is critical: if your tools are not trustworthy, your investigations wo not be trustworthy, either.
+      
+      Moreover, as the leading penetration testing distribution, Kali's strengths mean that a bogus version of Kali Linux could do a tremendous amount of damage if it were deployed unwittingly. There are plenty of people with plenty of reason to want to stick very sketchy stuff into something that looks like Kali, and you absolutely do not want to find yourself running something like that.</P>
+            <p>If you're running on Linux, you probably already have GPG (GNU Privacy Guard) installed. If you're on Windows or macOS, you'll need to install the appropriate version for your platform.</p>
+            <li>If you're on a PC running Windows, download and install GPG4Win from here. Certain versions of Windows do not have the native ability to calculate SHA256 checksums. To check this, you can open the command prompt and run <code>certutil -?</code>. If you do have this installed, you can run <code>certutil -hashfile kali-linux-2020.4-live-amd64.iso sha256</code> to verify your download. If you do not have certutil installed, you will also need a utility such as Microsoft File Checksum Integrity Verifier or Hashtab to verify your download.</li>
+            <li>If you're on a Macintosh running macOS, download and install GPGTools from here. Alternatively, if you have Homebrew installed, just run <code>brew install gnupg</code></li>
+          </article>
+        </section>
+        <section class="main-section" id="More">
+          <header>More</header>
+          <article>
+            <p>Visit Kali Linux Site for all the informations you need!</P>
+            <p>Thank You!</P>
+            <li><a style="color: silver" href="https://www.kali.org/" target="_blank">Kali Linux Site</a></li>
+            <li><a style="color: silver" href="https://www.kali.org/docs/" target="_blank">Kali Linux Documantation</ahref></li>
+          </article>
+        </section>
+      </main>
+</body>
+</html>
